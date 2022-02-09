@@ -3,6 +3,7 @@ import { useState } from 'react'
 import '../styles/tasklist.scss'
 
 import { FiTrash, FiCheckSquare } from 'react-icons/fi'
+import { Timer } from './Timer';
 
 interface Task {
   id: number;
@@ -86,6 +87,7 @@ export function TaskList() {
                 <p>{task.title}</p>
               </div>
 
+              <Timer />
               <button type="button" data-testid="remove-task-button" onClick={() => handleRemoveTask(task.id)}>
                 <FiTrash size={16}/>
               </button>
